@@ -1,0 +1,6 @@
+{
+  "name": "THE HUNDRED POEMS OF FAMOUS ONES",
+  "description": "An uncluttered minimalist royal poetry archive featuring 100 immortal poems, styled with Hay's Russet, Ecru, Olive Ocher, and Dark Medici Blue typography.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

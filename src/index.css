@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-royal: 'Cinzel', Georgia, serif;
+    --font-poem: 'Cormorant Garamond', Garamond, Georgia, serif;
+    --font-decorative: 'Cinzel Decorative', 'Cinzel', serif;
+    --font-ui: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+    /* Requested Palette */
+    --color-russet: #793327;
+    --color-ecru: #c2ae93;
+    --color-ocher: #d6b43e;
+    --color-medici: #547076;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "liga" 1, "kern" 1;
+  }
+}
+
+.font-royal {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-poem {
+  font-family: 'Cormorant Garamond', Garamond, Georgia, serif;
+}
+
+.font-decorative {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+}
+
+.font-sans-ui {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom delicate royal scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(84, 112, 118, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(214, 180, 62, 0.7);
+}
+
+/* Palette borders */
+.palette-border-russet {
+  border-color: #793327;
+}
+.palette-border-ecru {
+  border-color: #c2ae93;
+}
+.palette-border-ocher {
+  border-color: #d6b43e;
+}
+.palette-border-medici {
+  border-color: #547076;
+}
+
+/* Drop-cap for poem first letter */
+.drop-cap {
+  font-family: 'Cinzel', 'Cormorant Garamond', 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: 2.35em;
+  line-height: 0.86;
+  margin-right: 0.14em;
+  margin-left: 0.02em;
+  padding: 0.02em 0.04em 0 0.02em;
+  display: inline-block;
+  vertical-align: baseline;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  font-feature-settings: "liga" 1, "kern" 1;
+  text-shadow: 0 0 16px rgba(214, 180, 62, 0.22);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Gentle theme-aware drop-cap color accents matching the royal palette */
+.theme-ecru .drop-cap,
+[data-theme="ecru"] .drop-cap {
+  color: #793327; /* Hay's Russet for Ecru parchment */
+  text-shadow: 0 1px 2px rgba(121, 51, 39, 0.18);
+}
+
+.theme-russet .drop-cap,
+[data-theme="russet"] .drop-cap {
+  color: #d6b43e; /* Olive Ocher on deep russet */
+  text-shadow: 0 0 16px rgba(214, 180, 62, 0.35);
+}
+
+.theme-medici .drop-cap,
+[data-theme="medici"] .drop-cap {
+  color: #d6b43e; /* Olive Ocher on Dark Medici Blue */
+  text-shadow: 0 0 16px rgba(214, 180, 62, 0.28);
+}
+
+.theme-noir .drop-cap,
+[data-theme="noir"] .drop-cap {
+  color: #e5c158; /* Warm Radiant Gold on Obsidian */
+  text-shadow: 0 0 18px rgba(229, 193, 88, 0.38);
+}
